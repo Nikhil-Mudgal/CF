@@ -1,0 +1,22 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+
+int main() {
+	// your code goes here
+	int  tc,len{};
+    cin >> tc;
+    while (tc--){
+        string w{};
+        cin >> w;
+        if (w.length() > 10){
+            len = (w.end() - w.begin() -2);
+            string str = to_string(len);
+            w.replace(1,w.length()-2,str);
+            cout << w << endl;
+        }
+        else {
+            cout<< w << endl;}
+    }return 0;
+}
